@@ -1,111 +1,23 @@
-/*!
-.container{
-    color: red;
-    .wrapper{
-        color: blue;
-    }
-}
-*/
-div p.one {
-  width: 800px; /* 800px */
-  color: red; /* red */
-}
-
-p.two {
-  width: 1600px; /* 1600px */
-  color: red; /* red */
-}
-
-div {
-  background-image: url(heart.png);
-}
-
-div {
-  color: #008c8c;
-}
-
-div {
-  border-radius: 1px, 2px, 3px, 4px;
-}
-
-span {
-  border-radius: 1px 2px 3px 4px;
-}
-
-p {
-  border-radius: 3px 5px 3px 4px;
-}
-
-.color-box {
-  color: blue;
-}
-
-.text-red {
+.container .wrapper .box {
   color: red;
+  font-size: 14px;
+  font-weight: 900;
+  font-family: "Arial";
 }
-
-.text-blue {
+.container .wrapper .box.active {
   color: blue;
 }
 
-.text-green {
-  color: green;
+.box {
+  height: calc(100% - 10px);
+  width: 90%;
 }
 
-.bg-test {
-  background-color: #008c8c;
+.box {
+  width: 200px;
+  height: 100px;
 }
 
-.bg-primary {
-  background-color: #008c8c;
-}
-
-.bg-secondary {
-  background-color: #ff4400;
-}
-
-.bg-success {
-  background-color: #3366ff;
-}
-
-.icon-eye:before {
-  display: inline-block;
-  font-family: "Open Sans";
-  content: "\f112";
-}
-
-.icon-strt:before {
-  display: inline-block;
-  font-family: "Open Sans";
-  content: "\f12e";
-}
-
-.icon-stop:before {
-  display: inline-block;
-  font-family: "Open Sans";
-  content: "\f12f";
-}
-
-.color-lighten10 {
-  color: #ff3333;
-}
-
-.color-lighten20 {
-  color: #ff6666;
-}
-
-.color-darken10 {
-  color: #cc0000;
-}
-
-.color-darken20 {
-  color: #990000;
-}
-
-div {
-  background-color: #33c839;
-}
-
-span {
-  background-color: #33c839;
+.box {
+  width: clamp(50px, 10vw, 250px);
 }

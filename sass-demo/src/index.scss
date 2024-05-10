@@ -1,138 +1,33 @@
-/*!
 .container{
-    color: red;
     .wrapper{
-        color: blue;
-    }
-}
-*/
-
-
-// 声明变量
-$width: 1600px;
-
-div{
-  $width: 800px;
-  $color: red !global;
-
-  p.one{
-    width: $width; /* 800px */
-    color: $color; /* red */
-  }
-  
-}
-
-p.two{
-  width: $width; /* 1600px */
-  color: $color; /* red */
-}
-
-$what: heart;
-div{
-  background-image: url($what + ".png");
-}
-
-
-
-$a: 1>0;
-$b: 1<0;
-$c: false;
-$d: not $c;
-
-div{
-  @if $a and $b and $c and $d {
-    color: red;
-  } @else if $b and $c or not $d {
-    color: blue;
-  } @else if($d) {
-    color: #008c8c;
-  } @else {
-    color: green;
-  }
-}
-
-div{
-    border-radius: 1px, 2px, 3px, 4px;
-}
-
-span{
-    border-radius: 1px 2px 3px 4px;
-}
-p{
-    border-radius: (1px + 2px 5px) (3px 4px);
-}
-
-// nth
-$colorList: red, blue,green;
-.color-box{
-    color: nth($colorList, 2);
-}
-
-@each $color in $colorList{
-    .text-#{$color}{
-        color: $color;
-    }
-}
-
-// $colors: (
-//     $key1: red,
-//     $key2: blue,
-//     $key3: green,
-// );
-
-$colormap: (
-    "primary": #008c8c,
-    "secondary": #ff4400,
-    "success": #3366ff,
-);
-
-.bg-test {
-    background-color: map-get($map: $colormap, $key: 'primary');
-}
-
-@each $key, $value in $colormap {
-    .bg-#{$key}{
-        background-color: $value;
-    }
-}
-
-
-$icons:(
-    "eye":'\f112',
-    'strt': '\f12e',
-    'stop': '\f12f',
-);
-
-@each $key, $value in $icons {
-    .icon-#{$key}{
-        &:before{
-            display: inline-block;
-            font-family: 'Open Sans';
-            content: $value;
+        .box{
+            color: red;
+            font: {
+                size: 14px;
+                weight: 900;
+                family: 'Arial';
+            }
+            &.active{
+                color: blue;
+            }
         }
     }
 }
 
-$color: red;
-.color-lighten10{
-    color: lighten($color, 10%);
+.box{
+    height: calc(100% - 10px);
+    width: calc(100% - 10%);
 }
 
-
-.color-lighten20{
-    color: lighten($color, 20%);
+$width1: 100px;
+$width2: 200px;
+.box{
+    width: max($width1, $width2);
+    height: min($width1, $width2);
 }
 
-.color-darken10{
-    color: darken($color, 10%);
-}
-.color-darken20{
-    color: darken($color, 20%);
-}
-
-div{
-    background-color: saturate($color: #4caf50, $amount: 20%);
-}
-span{
-    background-color: saturate($color: #4caf50, $amount: 20%);
+$max: 250px;
+$min: 50px;
+.box{
+    width: clamp($min, 10vw, $max);
 }
