@@ -1,10 +1,13 @@
-@name: test;
-.@{name}-wrapper{
-    color: red;
+.box{
+    width: if(10px > 2px, 1px, 2px);
+    height: if(10px < 2px, 1px, 2px);
 }
 
-
 .box{
-    height: calc(100% - 10px);
-    width: calc(100% - 10%);
+    @width: 10px;
+    // 当@width大于2px时，color为red，否则为blue，height为10px，否则为20px
+    @if: if(@width > 2px, red, blue);
+    color: @if;
+    height: if(@width > 2px, 10px, 20px);
+    width: @width;
 }

@@ -1,33 +1,57 @@
-.container{
-    .wrapper{
-        .box{
-            color: red;
-            font: {
-                size: 14px;
-                weight: 900;
-                family: 'Arial';
-            }
-            &.active{
-                color: blue;
-            }
-        }
+.box {
+    width: if(100px > 50px, 100px, 50px);
+    height: if(100px < 50px, 100px, 50px);
+}
+
+
+$height: 10px;
+
+.box {
+    @if $height>50px {
+        color: red;
+    }
+
+    @else if $height>100px {
+        color: green;
+    }
+
+    @else {
+        color: blue
     }
 }
 
-.box{
-    height: calc(100% - 10px);
-    width: calc(100% - 10%);
+@for $i from 1 to 10 {
+    .box-#{$i} {
+        width: $i * 10px;
+    }
 }
 
-$width1: 100px;
-$width2: 200px;
-.box{
-    width: max($width1, $width2);
-    height: min($width1, $width2);
+$colorList: red,
+green,
+blue;
+
+@each $c in $colorList {
+    .#{$c}-box {
+        color: $c;
+    }
 }
 
-$max: 250px;
-$min: 50px;
-.box{
-    width: clamp($min, 10vw, $max);
+$value: 8;
+
+@while $value > 0 {
+    .box-#{$value} {
+        width: $value + px;
+    }
+    $value: $value - 1;
+}
+
+$dict: (
+    1: 100px,
+    2: 200px,
+    3: 300px
+);
+@each $key, $value in $dict {
+    .box-#{$key} {
+        width: $value;
+    }
 }

@@ -1,23 +1,100 @@
-.container .wrapper .box {
-  color: red;
-  font-size: 14px;
-  font-weight: 900;
-  font-family: "Arial";
+.box {
+  width: 100px;
+  height: 50px;
 }
-.container .wrapper .box.active {
+
+.box {
   color: blue;
 }
 
-.box {
-  height: calc(100% - 10px);
-  width: 90%;
+.box-1 {
+  width: 10px;
 }
 
-.box {
+.box-2 {
+  width: 20px;
+}
+
+.box-3 {
+  width: 30px;
+}
+
+.box-4 {
+  width: 40px;
+}
+
+.box-5 {
+  width: 50px;
+}
+
+.box-6 {
+  width: 60px;
+}
+
+.box-7 {
+  width: 70px;
+}
+
+.box-8 {
+  width: 80px;
+}
+
+.box-9 {
+  width: 90px;
+}
+
+.red-box {
+  color: red;
+}
+
+.green-box {
+  color: green;
+}
+
+.blue-box {
+  color: blue;
+}
+
+.box-8 {
+  width: 8px;
+}
+
+.box-7 {
+  width: 7px;
+}
+
+.box-6 {
+  width: 6px;
+}
+
+.box-5 {
+  width: 5px;
+}
+
+.box-4 {
+  width: 4px;
+}
+
+.box-3 {
+  width: 3px;
+}
+
+.box-2 {
+  width: 2px;
+}
+
+.box-1 {
+  width: 1px;
+}
+
+.box-1 {
+  width: 100px;
+}
+
+.box-2 {
   width: 200px;
-  height: 100px;
 }
 
-.box {
-  width: clamp(50px, 10vw, 250px);
+.box-3 {
+  width: 300px;
 }
