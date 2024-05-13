@@ -1,37 +1,30 @@
+.test-9 {
+  padding: 90px;
+}
+.test-8 {
+  padding: 80px;
+}
+.test-7 {
+  padding: 70px;
+}
+.test-6 {
+  padding: 60px;
+}
+.test-5 {
+  padding: 50px;
+}
+.test-4 {
+  padding: 40px;
+}
+.test-3 {
+  padding: 30px;
+}
+.test-2 {
+  padding: 20px;
+}
+.test-1 {
+  padding: 10px;
+}
 div {
-  height: 100px;
-  font-size: 12px;
   color: red;
-}
-
-span {
-  line-height: 20px;
-  font-size: 12px;
-  color: red;
-  text-align: center;
-}
-
-p {
-  color: blue;
-}
-
-i {
-  font-size: 21px;
-  color: #008c8c;
-}
-
-div {
-  color: aqua;
-  font-size: 13px;
-}
-
-button {
-  background-color: #008c8c;
-  border: 1px solid #004040;
-  height: 40px;
-  width: 100px;
-}
-button:hover {
-  background-color: #00a6a6;
-  border-color: #005959;
 }

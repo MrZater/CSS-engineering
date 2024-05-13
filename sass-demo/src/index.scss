@@ -1,68 +1,47 @@
-@mixin test {
-    font-size: 12px;
-    color: red;
+@function getValue($a: 20px, $b: 1) {
+    @return calc($a / $b);
 }
 
-@mixin test2 {
-    @include test;
-    text-align: center;
-}
-
-@mixin test3 ($size: 14px, $color: red) {
-    font-size: $size;
-    color: $color;
-}
+;
 
 div {
-    height: 100px;
-    @include test;
+    font-size: getValue(60px, 5);
+    width: getValue();
 }
 
-span {
-    line-height: 20px;
-    @include test2;
-}
+@function contrast-color($background-color) {
+    $brightness: red($background-color) * 0.299 + green($background-color) * 0.587+ blue($background-color) * 0.114;
+    // 根据亮度返回黑色或者白色文字颜色
+    @if $brightness>128 {
+        @return #000;
+    }
 
-p {
-    @include test3(null, blue);
-}
-
-$args: 21px,
-#008c8c;
-
-i {
-    @include test3($args...);
-}
-
-
-@mixin test4 {
-    div {
-        @content;
+    @else {
+        @return #fff;
     }
 }
 
-@include test4 {
-    color: aqua;
-    font-size: 13px;
+;
+
+div {
+    $background-color: #eee;
+    background-color: contrast-color($background-color);
 }
 
 
-@mixin button-theme ($color: #000000) {
-    background-color: $color;
-    border: 1px solid darken($color, 15%);
+$list1: 1px 2px;
+$list2: 20px 50px;
 
-    &:hover {
-        background-color: lighten($color, 5%);
-        border-color: darken($color, 10%);
-    }
-
-    @content;
+div{
+    border-radius: join($list1, $list2, comma);
 }
 
-button {
-    @include button-theme(#008c8c) {
-        // @content;
-        height: 40px;
-        width: 100px;
+
+$borderStyle: zip($list1, $list2);
+
+
+@each $border-style in $borderStyle {
+    .div-#{index($borderStyle, $border-style)}{
+        border-radius: $border-style;
     }
 }

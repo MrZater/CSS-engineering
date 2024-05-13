@@ -1,18 +1,13 @@
-.box{
-    width: if(10px > 2px, 1px, 2px);
-    height: if(10px < 2px, 1px, 2px);
+.test (@i) when(@i < 10) {
+    .test(@i + 1);
+
+    .test-@{i} {
+        padding: @i * 10px;
+    }
 }
 
-.box{
-    @width: 10px;
-    // 当@width大于2px时，color为red，否则为blue，height为10px，否则为20px
-    @if: if(@width > 2px, red, blue);
-    color: @if;
-    height: if(@width > 2px, 10px, 20px);
-    width: @width;
-}
+.test(1);
 
-.test{
-    font-size: 12px;
+div {
     color: red;
 }
