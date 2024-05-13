@@ -1,57 +1,68 @@
-.box {
-    width: if(100px > 50px, 100px, 50px);
-    height: if(100px < 50px, 100px, 50px);
+@mixin test {
+    font-size: 12px;
+    color: red;
+}
+
+@mixin test2 {
+    @include test;
+    text-align: center;
+}
+
+@mixin test3 ($size: 14px, $color: red) {
+    font-size: $size;
+    color: $color;
+}
+
+div {
+    height: 100px;
+    @include test;
+}
+
+span {
+    line-height: 20px;
+    @include test2;
+}
+
+p {
+    @include test3(null, blue);
+}
+
+$args: 21px,
+#008c8c;
+
+i {
+    @include test3($args...);
 }
 
 
-$height: 10px;
-
-.box {
-    @if $height>50px {
-        color: red;
-    }
-
-    @else if $height>100px {
-        color: green;
-    }
-
-    @else {
-        color: blue
+@mixin test4 {
+    div {
+        @content;
     }
 }
 
-@for $i from 1 to 10 {
-    .box-#{$i} {
-        width: $i * 10px;
-    }
+@include test4 {
+    color: aqua;
+    font-size: 13px;
 }
 
-$colorList: red,
-green,
-blue;
 
-@each $c in $colorList {
-    .#{$c}-box {
-        color: $c;
+@mixin button-theme ($color: #000000) {
+    background-color: $color;
+    border: 1px solid darken($color, 15%);
+
+    &:hover {
+        background-color: lighten($color, 5%);
+        border-color: darken($color, 10%);
     }
+
+    @content;
 }
 
-$value: 8;
-
-@while $value > 0 {
-    .box-#{$value} {
-        width: $value + px;
-    }
-    $value: $value - 1;
-}
-
-$dict: (
-    1: 100px,
-    2: 200px,
-    3: 300px
-);
-@each $key, $value in $dict {
-    .box-#{$key} {
-        width: $value;
+button {
+    @include button-theme(#008c8c) {
+        // @content;
+        height: 40px;
+        width: 100px;
     }
 }

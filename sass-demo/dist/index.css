@@ -1,100 +1,37 @@
-.box {
-  width: 100px;
-  height: 50px;
-}
-
-.box {
-  color: blue;
-}
-
-.box-1 {
-  width: 10px;
-}
-
-.box-2 {
-  width: 20px;
-}
-
-.box-3 {
-  width: 30px;
-}
-
-.box-4 {
-  width: 40px;
-}
-
-.box-5 {
-  width: 50px;
-}
-
-.box-6 {
-  width: 60px;
-}
-
-.box-7 {
-  width: 70px;
-}
-
-.box-8 {
-  width: 80px;
-}
-
-.box-9 {
-  width: 90px;
-}
-
-.red-box {
+div {
+  height: 100px;
+  font-size: 12px;
   color: red;
 }
 
-.green-box {
-  color: green;
+span {
+  line-height: 20px;
+  font-size: 12px;
+  color: red;
+  text-align: center;
 }
 
-.blue-box {
+p {
   color: blue;
 }
 
-.box-8 {
-  width: 8px;
+i {
+  font-size: 21px;
+  color: #008c8c;
 }
 
-.box-7 {
-  width: 7px;
+div {
+  color: aqua;
+  font-size: 13px;
 }
 
-.box-6 {
-  width: 6px;
-}
-
-.box-5 {
-  width: 5px;
-}
-
-.box-4 {
-  width: 4px;
-}
-
-.box-3 {
-  width: 3px;
-}
-
-.box-2 {
-  width: 2px;
-}
-
-.box-1 {
-  width: 1px;
-}
-
-.box-1 {
+button {
+  background-color: #008c8c;
+  border: 1px solid #004040;
+  height: 40px;
   width: 100px;
 }
-
-.box-2 {
-  width: 200px;
-}
-
-.box-3 {
-  width: 300px;
+button:hover {
+  background-color: #00a6a6;
+  border-color: #005959;
 }
