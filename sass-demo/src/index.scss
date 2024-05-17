@@ -1,47 +1,57 @@
-@function getValue($a: 20px, $b: 1) {
-    @return calc($a / $b);
-}
+@import './variable';
+@import './mixins';
+@import './header';
 
-;
-
-div {
-    font-size: getValue(60px, 5);
-    width: getValue();
-}
-
-@function contrast-color($background-color) {
-    $brightness: red($background-color) * 0.299 + green($background-color) * 0.587+ blue($background-color) * 0.114;
-    // 根据亮度返回黑色或者白色文字颜色
-    @if $brightness>128 {
-        @return #000;
-    }
-
-    @else {
-        @return #fff;
-    }
-}
-
-;
-
-div {
-    $background-color: #eee;
-    background-color: contrast-color($background-color);
-}
-
-
-$list1: 1px 2px;
-$list2: 20px 50px;
 
 div{
-    border-radius: join($list1, $list2, comma);
+    border: 1px solid $borderColor;
+    color: $color;
+    @include test ($color);
+}
+
+.navigation{
+    @media (max-width: 768px) and (min-width: 320px) {
+        color: $color;
+        @include test ($color);
+    }
 }
 
 
-$borderStyle: zip($list1, $list2);
+.button{
+    border: 1px solid red;
+    background-color: #eee;
+    color: #999;
+}
+
+.search-button{
+    @extend .button;
+    border: 1px solid blue;
+}
+
+%btn{
+    border: 1px solid green;
+    background-color: #ccc;
+    color: #333;
+}
+
+.search-button{
+    @extend %btn;
+    border: 1px solid red;
+}
 
 
-@each $border-style in $borderStyle {
-    .div-#{index($borderStyle, $border-style)}{
-        border-radius: $border-style;
+
+.parent{
+    color: red;
+    @at-root.child1{
+        color: green;
+    }
+    @at-root {
+        .child2{
+            color: yellow;
+        }
+        .child3{
+            color: blue;
+        }
     }
 }
