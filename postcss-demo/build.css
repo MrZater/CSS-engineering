@@ -4,6 +4,8 @@ body{
 }
 .box1{
     border: 1px solid red;
-    transform: rotate(120px);
+    -webkit-transform: rotate(120px);
+        -ms-transform: rotate(120px);
+            transform: rotate(120px);
     border-color: #008c8c;
 }
