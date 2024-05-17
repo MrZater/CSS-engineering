@@ -1,15 +1,16 @@
 {
-  "name": "sass-demo",
+  "name": "postcss-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "less": "^4.2.0",
-    "sass": "^1.77.0"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
   }
 }
