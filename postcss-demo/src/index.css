@@ -1,9 +1,13 @@
-body{
-    background-color: red;
-    font-size: 20px;
+::placeholder{
+    color: red;
 }
-.box1{
-    border: 1px solid red;
-    transform: rotate(120px);
-    border-color: #008c8c;
+/* media .img */
+.img{
+    background-image: url(image@1x.png);
 }
+@media (min-resolution: 2dppx) {
+    .img{
+        background-image: url(image@2x.png);
+    }
+}
+/* .box{} */

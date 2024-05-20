@@ -1,11 +1,1 @@
-body{
-    background-color: red;
-    font-size: 20px;
-}
-.box1{
-    border: 1px solid red;
-    -webkit-transform: rotate(120px);
-        -ms-transform: rotate(120px);
-            transform: rotate(120px);
-    border-color: #008c8c;
-}
+::-webkit-input-placeholder{color:red}::-moz-placeholder{color:red}:-ms-input-placeholder{color:red}::-ms-input-placeholder{color:red}::placeholder{color:red}.img{background-image:url(image@1x.png)}@media (resolution >= 2dppx){.img{background-image:url(image@2x.png)}}

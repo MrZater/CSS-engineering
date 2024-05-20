@@ -12,7 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.1",
     "postcss": "^8.4.38",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard": "^36.0.0"
   }
 }
