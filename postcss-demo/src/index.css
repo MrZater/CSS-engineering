@@ -1,13 +1,29 @@
-::placeholder{
+@import 'a.css';
+@import 'b.css';
+.a {
     color: red;
-}
-/* media .img */
-.img{
-    background-image: url(image@1x.png);
-}
-@media (min-resolution: 2dppx) {
-    .img{
-        background-image: url(image@2x.png);
+
+    &.b {
+        color: green;
+        transform: translate(100px);
+    }
+
+    &>.b {
+        color: blue;
+    }
+
+    &:hover {
+        color: #000;
     }
 }
-/* .box{} */
+
+.container{
+    font-size: 14px;
+}
+p{
+    color: red;
+}
+
+.text-hover{
+    color: yellow;
+}
