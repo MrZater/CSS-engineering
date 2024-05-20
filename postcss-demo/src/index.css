@@ -1,29 +1,4 @@
-@import 'a.css';
-@import 'b.css';
-.a {
+.test{
     color: red;
-
-    &.b {
-        color: green;
-        transform: translate(100px);
-    }
-
-    &>.b {
-        color: blue;
-    }
-
-    &:hover {
-        color: #000;
-    }
-}
-
-.container{
-    font-size: 14px;
-}
-p{
-    color: red;
-}
-
-.text-hover{
-    color: yellow;
+    font-size: 12px;
 }
