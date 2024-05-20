@@ -1,4 +1,14 @@
 .test{
     color: red;
-    font-size: 12px;
+    background-color: red;
+}
+
+.test1{
+    color: blue;
+    background-color: blue;
+}
+
+.test2{
+    color: green;
+    background-color: green;
 }
