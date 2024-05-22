@@ -2,59 +2,44 @@
  * @Author: zt zhoutao@ydmob.com
  * @Date: 2024-05-20 18:33:06
  * @LastEditors: zt zhoutao@ydmob.com
- * @LastEditTime: 2024-05-22 17:24:14
+ * @LastEditTime: 2024-05-22 18:16:53
  * @FilePath: /CSS-engineering/tailwindcss-demo/src/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>小米商城tailwindcss</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://at.alicdn.com/t/font_2960521_rqz39d8moo.css"
-    />
-    <link rel="stylesheet" href="../dist/output.css" />
-  </head>
-  <body>
-    <!-- 顶部导航 开始 -->
-    <div class="h-40 text-xs bg-custom-gray2 text-custom-light-gray">
-      <div class="clear-both mx-auto w-1226">
-        <ul class="float-left leading-10">
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">小米商城</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">MIUI</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">IoT</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">云服务</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">天星数科</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">有品</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">小爱开放平台</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">企业团购</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">资质证照</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">协议规则</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">下载app</a></li>
-          <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">智能生活</a></li>
-          <li class="float-left"><a class="py-0 px-7 hover:text-white" href="">Select Location</a></li>
-        </ul>
-        <div class="float-right">
-          <!-- 登录、注册、消息通知 -->
-          <ul class="float-left leading-10">
-            <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">登录</a></li>
-            <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">注册</a></li>
-            <li class="float-left"><a class="py-0 border-r border-solid px-7 border-custom-gray hover:text-white" href="">消息通知</a></li>
-          </ul>
-          <!-- 购物车 -->
-          <div class="relative float-left h-40 bg-custom-gray2 w-120 ml-13 group">
-            <a href="" class="block w-full h-full leading-10 text-center group-hover:text-orange-500 group-hover:bg-white">
-              <i class="mr-1 i-car iconfont "></i>
-              <span>购物车（0）</span>
-            </a>
-            <div class="absolute right-0 z-50 h-0 overflow-hidden text-center transition duration-500 bg-white border border-t-0 border-gray-300 border-solid w-320 top-10 leading-100 group-hover:h-100">购物车中还没有商品，赶紧选购吧！</div>
-          </div>
-        </div>
+<html lang="en" class="text-35">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>class3-2</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../dist/output.css" />
+</head>
+
+<body class="flex items-center justify-center w-screen h-screen p-0 m-0">
+  <!-- 最外层容器 -->
+  <div class="flex justify-between w-32 h-4">
+    <!-- 粉色方块 -->
+    <div class="w-4 h-4 animate-slide">
+      <div class="absolute w-4 h-4 bg-pink-500 rounded-15 shadow-custom"></div>
+    </div>
+    <!-- 蓝色方块 -->
+    <div class="flex justify-between w-24">
+      <div class="w-4 h-4 animate-jump-off-1">
+        <div class="absolute w-4 h-4 bg-blue-500 brightness-100 rounded-15 shadow-custom animate-jump-down-1"></div>
+      </div>
+      <div class="w-4 h-4 animate-jump-off-2">
+        <div class="absolute w-4 h-4 bg-blue-500 brightness-115 rounded-15 shadow-custom animate-jump-down-2"></div>
+      </div>
+      <div class="w-4 h-4 animate-jump-off-3">
+        <div class="absolute w-4 h-4 bg-blue-500 brightness-130 rounded-15 shadow-custom animate-jump-down-3"></div>
+      </div>
+      <div class="w-4 h-4 animate-jump-off-4">
+        <div class="absolute w-4 h-4 bg-blue-500 brightness-145 rounded-15 shadow-custom animate-jump-down-4"></div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
