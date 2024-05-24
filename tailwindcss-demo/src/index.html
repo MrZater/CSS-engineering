@@ -2,12 +2,12 @@
  * @Author: zt zhoutao@ydmob.com
  * @Date: 2024-05-20 18:33:06
  * @LastEditors: zt zhoutao@ydmob.com
- * @LastEditTime: 2024-05-23 17:53:08
+ * @LastEditTime: 2024-05-23 18:16:37
  * @FilePath: /CSS-engineering/tailwindcss-demo/src/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <!DOCTYPE html>
-<html lang="en" class="text-35">
+<html lang="en" class="text-50">
 
 <head>
   <meta charset="UTF-8" />
@@ -17,28 +17,26 @@
   <link rel="stylesheet" href="../dist/output.css" />
 </head>
 
-<body class="flex items-center justify-center w-screen h-screen p-0 m-0">
-  <!-- 最外层容器 -->
-  <div class="flex justify-between w-32 h-4">
-    <!-- 粉色方块 -->
-    <div class="w-4 h-4 slide">
-      <div class="absolute w-4 h-4 bg-pink-500 rounded-15 shadow-custom"></div>
-    </div>
-    <!-- 蓝色方块 -->
-    <div class="flex justify-between w-24">
-      <div class="w-4 h-4 jump-off-1">
-        <div class="absolute w-4 h-4 bg-blue-500 brightness-100 rounded-15 shadow-custom jump-down-1"></div>
-      </div>
-      <div class="w-4 h-4 jump-off-2">
-        <div class="absolute w-4 h-4 bg-blue-500 brightness-115 rounded-15 shadow-custom jump-down-2"></div>
-      </div>
-      <div class="w-4 h-4 jump-off-3">
-        <div class="absolute w-4 h-4 bg-blue-500 brightness-130 rounded-15 shadow-custom jump-down-3"></div>
-      </div>
-      <div class="w-4 h-4 jump-off-4">
-        <div class="absolute w-4 h-4 bg-blue-500 brightness-145 rounded-15 shadow-custom jump-down-4"></div>
-      </div>
-    </div>
+<body class="p-0 m-0">
+  <div class="h-40 mx-auto mt-12 w-80">
+    <ul>
+      <li class="item bg-img-1">
+        <input type="radio" name="swith" class="btn peer">
+        <div class="bg bg-img-1 peer-checked:opacity-100"></div>
+      </li>
+      <li class="item bg-img-2">
+        <input type="radio" name="swith" class="btn peer">
+        <div class="bg bg-img-2 peer-checked:opacity-100"></div>
+      </li>
+      <li class="item bg-img-3">
+        <input type="radio" name="swith" class="btn peer">
+        <div class="bg bg-img-3 peer-checked:opacity-100"></div>
+      </li>
+      <li class="item bg-img-4">
+        <input type="radio" name="swith" class="btn peer">
+        <div class="bg bg-img-4 peer-checked:opacity-100"></div>
+      </li>
+    </ul>
   </div>
 </body>
 
