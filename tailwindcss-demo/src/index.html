@@ -1,43 +1,106 @@
 <!--
  * @Author: zt zhoutao@ydmob.com
- * @Date: 2024-05-20 18:33:06
+ * @Date: 2024-05-24 11:42:45
  * @LastEditors: zt zhoutao@ydmob.com
- * @LastEditTime: 2024-05-23 18:16:37
- * @FilePath: /CSS-engineering/tailwindcss-demo/src/index.html
+ * @LastEditTime: 2024-05-24 14:11:10
+ * @FilePath: /CSS-engineering/tailwindcss-demo/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <!DOCTYPE html>
-<html lang="en" class="text-50">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>class3-2</title>
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="../dist/output.css" />
-</head>
-
-<body class="p-0 m-0">
-  <div class="h-40 mx-auto mt-12 w-80">
-    <ul>
-      <li class="item bg-img-1">
-        <input type="radio" name="swith" class="btn peer">
-        <div class="bg bg-img-1 peer-checked:opacity-100"></div>
-      </li>
-      <li class="item bg-img-2">
-        <input type="radio" name="swith" class="btn peer">
-        <div class="bg bg-img-2 peer-checked:opacity-100"></div>
-      </li>
-      <li class="item bg-img-3">
-        <input type="radio" name="swith" class="btn peer">
-        <div class="bg bg-img-3 peer-checked:opacity-100"></div>
-      </li>
-      <li class="item bg-img-4">
-        <input type="radio" name="swith" class="btn peer">
-        <div class="bg bg-img-4 peer-checked:opacity-100"></div>
-      </li>
-    </ul>
-  </div>
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>响应式项目</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body class="p-0 m-0">
+    <!-- 头部 -->
+    <header id="header" class="box-border fixed top-0 left-0 z-50 flex items-center justify-between w-screen py-0 border-b px-10vw bg-custom-gray border-custom-gray sm:h-50px md:h-20">
+      <!-- logo 部分 -->
+      <div class="logo"></div>
+      <!-- 导航栏 -->
+      <nav class="flex items-center">
+        <ul class="flex max-sm:h-0 max-sm:overflow-hidden max-sm:transition-all max-sm:duration-500 max-sm:flex-wrap max-sm:relative max-sm:top-6">
+          <li class="nav-bar"><a href="#" class="text-custom-gray">网站首页</a></li>
+          <li class="nav-bar"><a href="#" class="text-custom-gray">公司介绍</a></li>
+          <li class="nav-bar"><a href="#" class="text-custom-gray">产品介绍</a></li>
+          <li class="nav-bar"><a href="#" class="text-custom-gray">大事件</a></li>
+          <li class="nav-bar"><a href="#" class="text-custom-gray">联系我们</a></li>
+        </ul>
+        <!-- 汉堡按钮，全屏状态下是不显示的 -->
+        <button class="hidden border-0 cursor-pointer outline-0 w-50px h-50px btn-bg max-sm:block"></button>
+      </nav>
+    </header>
+    <!-- 轮播图 -->
+    <div id="pic" class="relative w-screen mt-20 overflow-hidden max-sm:h-40vh sm:h-50vh md:h-70vh">
+      <ul class="absolute left-0 flex h-full transition-all duration-1000 w-300vw">
+        <li class="w-screen h-full"></li>
+        <li class="w-screen h-full"></li>
+        <li class="w-screen h-full"></li>
+      </ul>
+    </div>
+    <!-- 热销项目 -->
+    <div id="project" class="mx-0 mt-50px">
+      <!-- 标题 -->
+      <div class="mb-5 text-center text-custom-gray2">
+        <h2 class="font-hairline text-custom-36">热销项目</h2>
+        <p class="text-custom-gray2">Hot selling tour line</p>
+      </div>
+      <!-- 项目列表 -->
+      <div class="flex flex-wrap justify-around w-4/5 mx-auto my-14 md:w-720px lg:w-960px xl:w-1140px">
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+        <div class="item">
+          <img src="./img/7.png" alt="" class="img"/>
+          <p class="font-thin mt-2.5">尼罗河是世界上最长的河流</p>
+        </div>
+      </div>
+    </div>
+    <!-- 页尾 -->
+    <footer id="footer" class="w-full footer-bg max-sm:h-300 sm:h-400 md:h-500"></footer>
+    <script src="./index.js"></script>
+  </body>
 </html>
