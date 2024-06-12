@@ -1,28 +1,27 @@
-/*
- * @Author: zt zhoutao@ydmob.com
- * @Date: 2024-05-20 18:25:06
- * @LastEditors: zt zhoutao@ydmob.com
- * @LastEditTime: 2024-05-24 17:22:04
- * @FilePath: /CSS-engineering/tailwindcss-demo/tailwind.config.js
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 /** @type {import('tailwindcss').Config} */
+
+const myPlugin = require("./src/plugins/my-plugin.js");
+
 module.exports = {
-  content: [
-    'src/**/*.{html,js,jsx,ts,tsx,vue}'
-  ],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontSize: {
+        '35': '35px',
+      },
+      boxShadow: {
+        custom: "0 0 0.1em rgba(0, 0, 0, 0.3)",
+      },
+      borderRadius: {
+        "15p": "15%",
+      },
+      brightness: {
+        '100': '1',
+        '115': '1.15',
+        '130': '1.3',
+        '145': '1.45',
+      },
     },
   },
-  variants: {
-    extend: {
-      opacity: ["ipt-checked"]
-    }
-  },
-  plugins: [],
-  // darkMode: 'class',
-  // safelist: [
-  //   'bg-red-100',
-  // ]
-}
+  plugins: [myPlugin],
+};
